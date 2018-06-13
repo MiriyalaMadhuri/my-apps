@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_loaner" label="Loaner" language="en" table="cmdb_ci_lb_cisco_css">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_loaner</element>
+            <help/>
+            <hint/>
+            <label>Loaner</label>
+            <language>en</language>
+            <name>cmdb_ci_lb_cisco_css</name>
+            <plural>Loaners</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-11 05:54:57</sys_created_on>
+            <sys_id>7762e2b6db221300db17f28239961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Loaner</sys_name>
+            <sys_package display_value="Time Sheets" source="x_183190_time_shee">1dbcc44adba21300db17f282399619fd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Time Sheets">1dbcc44adba21300db17f282399619fd</sys_scope>
+            <sys_update_name>sys_documentation_cmdb_ci_lb_cisco_css_u_loaner_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-11 05:54:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

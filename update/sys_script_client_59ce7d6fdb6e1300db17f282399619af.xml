@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_com</field>
+        <global>true</global>
+        <messages/>
+        <name>week day</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   var today = new Date();
+var day = new Date(today.getFullYear(), today.getMonth(), today.getDate()+5);
+var datefield = g_form.getValue('u_week');
+if(datefield >= day)
+{
+alert('enter new date');
+}
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-13 11:16:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>59ce7d6fdb6e1300db17f282399619af</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>week day</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Time Sheets" source="x_183190_time_shee">1dbcc44adba21300db17f282399619fd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Time Sheets">1dbcc44adba21300db17f282399619fd</sys_scope>
+        <sys_update_name>sys_script_client_59ce7d6fdb6e1300db17f282399619af</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-13 11:31:52</sys_updated_on>
+        <table>x_183190_time_shee_time_sheet</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

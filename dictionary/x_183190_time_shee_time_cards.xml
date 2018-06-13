@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Time Cards" max_length="40" name="x_183190_time_shee_time_cards" type="collection">
+        <element default="javascript:parent.u_emp.getDisplayValue()" label="Employee" max_length="50" name="employee" read_only="true" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category" mandatory="true" max_length="40" name="u_cat" type="string">
+            <choice>
+                <element label="Meeting" sequence="0" value="meeting"/>
+                <element label="Training" sequence="1" value="training"/>
+                <element label="Out of Office" sequence="2" value="out of office"/>
+                <element label="Self-Learning" sequence="3" value="self-learning"/>
+                <element label="Project Work" sequence="4" value="project work"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="40" name="u_com" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_des" type="string"/>
+        <element default="0" label="Friday Time" max_length="40" name="u_fri" type="integer"/>
+        <element default="0" label="Monday Time" max_length="40" name="u_mon" type="integer"/>
+        <element label="dummy" max_length="32" name="u_reference_7" reference="x_183190_time_shee_time_sheet" type="reference"/>
+        <element default="0" label="Saturday Time" max_length="40" name="u_sat" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="u_cat" dependent_on_field="u_cat" label="SubCategory" max_length="40" name="u_sub" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="meeting" label="Internal meeting" sequence="0" value="Internal meeting"/>
+                <element label="Internal Meeting" sequence="0" value="internal"/>
+                <element dependent_value="out of office" label="Planned leave" sequence="0" value="Planned leave"/>
+                <element dependent_value="training" label="Training Given" sequence="0" value="Training Given"/>
+                <element label="External Meeting" sequence="1" value="external"/>
+                <element dependent_value="meeting" label="External Meeting" sequence="1" value="External Meeting"/>
+                <element dependent_value="out of office" label="Sick Leave" sequence="1" value="Sick Leave"/>
+                <element dependent_value="training" label="Training Taken" sequence="1" value="Training Taken"/>
+                <element dependent_value="out of office" label="Emergency" sequence="2" value="Emergency"/>
+                <element dependent_value="out of office" label="Public Holiday" sequence="3" value="Public Holiday"/>
+                <element dependent_value="out of office" label="Transfer" sequence="4" value="Transfer"/>
+            </choice>
+        </element>
+        <element default="0" label="Sunday Time" max_length="40" name="u_sun" type="integer"/>
+        <element default="0" label="Thursday Time" max_length="40" name="u_thurs" type="integer"/>
+        <element label="Total Time Spent" max_length="40" name="u_time" type="integer"/>
+        <element default="0" label="Tuesday Time" max_length="40" name="u_tues" type="integer"/>
+        <element default="0" label="Wednesday Time" max_length="40" name="u_wed" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Week Day" max_length="40" name="u_wee" type="string">
+            <choice>
+                <element label="Monday" sequence="0" value="monday"/>
+                <element label="Tuesday" sequence="1" value="tuesday"/>
+                <element label="Wednesday" sequence="2" value="wednesday"/>
+                <element label="Thursday" sequence="3" value="thursday"/>
+                <element label="Friday" sequence="4" value="friday"/>
+                <element label="Saturday" sequence="5" value="saturday"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_reference_7"/>
+        </index>
+    </element>
+</database>

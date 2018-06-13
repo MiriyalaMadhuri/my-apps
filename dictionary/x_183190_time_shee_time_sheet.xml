@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Time Sheet" max_length="40" name="x_183190_time_shee_time_sheet" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="40" name="u_com" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="bdcb83a85f220100a9ad2572f2b4773d" label="Employee" max_length="32" name="u_emp" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="draft" label="State" max_length="40" name="u_state" read_only="true" type="choice">
+            <choice>
+                <element label="Draft" sequence="0" value="draft"/>
+                <element label="Waiting For Approval" sequence="1" value="waiting_for_approval"/>
+                <element label="Approved" sequence="2" value="approved"/>
+                <element label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Total Hours" max_length="40" name="u_tot" read_only="true" type="string"/>
+        <element label="Week Starts On" max_length="40" name="u_week" type="glide_date"/>
+        <index name="index">
+            <element name="u_emp"/>
+        </index>
+    </element>
+</database>
